@@ -1,17 +1,17 @@
 {
   "stocks": [
     {
-      "name": "ASIANPAINT",
-      "type": "NSE",
-      "value": 3143.65,
-      "percent": "-0.02",
-      "id": 2
-    },
-    {
       "name": "NIFTY BANK",
       "type": "NSE",
       "value": 35590.5,
       "percent": "-0.08",
+      "id": 2
+    },
+    {
+      "name": "ASIANPAINT",
+      "type": "NSE",
+      "value": 3143.65,
+      "percent": "-0.02",
       "id": 3
     }
   ]

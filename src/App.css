@@ -1,0 +1,172 @@
+.searchInputs {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.search input {
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 18px;
+  padding: 15px;
+  height: 30px;
+  width: 600px;
+}
+
+.searchIcon {
+  height: 60px;
+  width: 50px;
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+  margin-left: -50px;
+  z-index: 1;
+}
+.searchInputs > div:nth-of-type(2) {
+  display: flex;
+}
+.searchInputs > div:nth-of-type(1) {
+  font-size: 25px;
+  padding-left: 25px;
+}
+.searchInputs > div:nth-of-type(1) > img {
+  width: 23%;
+}
+input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+
+.dataResult {
+  margin-top: 5px;
+  width: 625px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  margin: auto;
+  max-height: 336px;
+  position: absolute;
+  left: 46.5%;
+  top: 18%;
+  z-index: 1;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.dataItem p {
+  margin-left: 10px;
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: lightgrey;
+}
+
+#clearBtn {
+  cursor: pointer;
+}
+.search_details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 35px;
+  border-top: 1px solid #ededed;
+}
+.up_green,
+.down_red {
+  width: 14%;
+  object-fit: contain;
+  margin-right: 3px;
+}
+
+.search_details > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  width: 100px;
+}
+.search_details > div:nth-of-type(2) > p:nth-of-type(2) {
+  display: flex;
+  /* align-items: center; */
+}
+.search_details > div > * {
+  padding: 5px;
+}
+.search_details:hover {
+  background-color: #eeeeee;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.search_details > div:nth-of-type(1) > div {
+  display: inline-flex;
+  font-size: 9px;
+  background: #ededed;
+  border-radius: 8px;
+}
+.search_details:hover.search_details > div:nth-of-type(1) > div {
+  background: #fff;
+}
+
+.show {
+  position: absolute;
+  display: flex;
+  left: 68%;
+}
+.hidden {
+  display: none;
+}
+.show > div {
+  margin: 0 5px;
+  border-radius: 5px;
+}
+.show > div:hover {
+  transform: scale(1.1);
+  transition: 0.3s all;
+}
+.show > div:nth-of-type(1),
+.show > div:nth-of-type(4),
+.show > div:nth-of-type(5) {
+  background: #fff;
+}
+.show > div:nth-of-type(4) {
+  color: red;
+}
+.show > div:nth-of-type(2) {
+  background: #1990ff;
+  padding: 5px 15px;
+  color: #fff;
+}
+.show > div:nth-of-type(3) {
+  background: #ff4d4f;
+  padding: 5px 15px;
+  color: #fff;
+}

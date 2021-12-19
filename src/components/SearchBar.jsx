@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./SearchBar.css";
 import SearchIcon from "@material-ui/icons/Search";
 import CloseIcon from "@material-ui/icons/Close";
 import { TextField } from "@mui/material";
 import axios from "axios";
+import "./Styles/SearchBar.css";
 import AddIcon from "@mui/icons-material/Add";
-import BookmarkIcon from "@mui/icons-material/Bookmark";
+import BookmarkAddedTwoToneIcon from "@mui/icons-material/BookmarkAddedTwoTone";
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
@@ -45,9 +45,7 @@ function SearchBar({ placeholder, data }) {
       value: e[1],
       percent: percentage(e),
     };
-
     let response = await axios.post("http://localhost:5000/stocks", payload);
-    //console.log(e);
     setwatchData(response);
   };
 
@@ -65,7 +63,6 @@ function SearchBar({ placeholder, data }) {
       setAdd(true);
     }
   };
-  console.log("ckec", checked, add);
   function check(val, arr) {
     for (let key of arr) {
       if (key.name === val) {
@@ -73,24 +70,28 @@ function SearchBar({ placeholder, data }) {
       }
     }
   }
-
   return (
     <div className="search">
       <div className="searchInputs">
-        <TextField
-          id="outlined-name"
-          label="Search"
-          type="text"
-          placeholder={placeholder}
-          value={wordEntered}
-          onChange={handleFilter}
-        />
-        <div className="searchIcon">
-          {filteredData.length === 0 ? (
-            <SearchIcon />
-          ) : (
-            <CloseIcon id="clearBtn" onClick={clearInput} />
-          )}
+        <div>
+          <img src="./stock.svg" />
+        </div>
+        <div>
+          <TextField
+            id="outlined-name"
+            label="Search"
+            type="text"
+            placeholder={placeholder}
+            value={wordEntered}
+            onChange={handleFilter}
+          />
+          <div className="searchIcon">
+            {filteredData.length === 0 ? (
+              <SearchIcon />
+            ) : (
+              <CloseIcon id="clearBtn" onClick={clearInput} />
+            )}
+          </div>
         </div>
       </div>
       {filteredData.length !== 0 && (
@@ -130,7 +131,7 @@ function SearchBar({ placeholder, data }) {
                   <p>
                     <img
                       src="./green.png"
-                      alt="up-green"
+                      alt="up_green"
                       className="up-green"
                     />
                     {percentage(value) + "%"}
@@ -144,7 +145,7 @@ function SearchBar({ placeholder, data }) {
                   </div>
                 ) : (
                   <div>
-                    <BookmarkIcon />
+                    <BookmarkAddedTwoToneIcon />
                   </div>
                 )}
               </div>

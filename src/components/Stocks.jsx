@@ -1,31 +1,31 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import styled from "./Stocks.module.css";
+import styled from "./Styles/Stocks.module.css";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
-
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+
 function Stocks() {
   const [data, setData] = useState([]);
   const [nameData, setnameData] = useState("Your Watchlist");
   const [hover, setHover] = useState(-1);
 
-  useEffect(() => {
-    getData();
-  }, [data]);
-
   const getData = async () => {
     let response = await axios.get("http://localhost:5000/stocks");
     setData(response.data);
   };
-  // console.log(nameData);
+  useEffect(() => {
+    getData();
+  }, [data]);
+
   const handleDelete = async (id) => {
     await axios.delete(`http://localhost:5000/stocks/${id}`);
     const delData = data.filter((item) => item.id !== id);
     setData(delData);
   };
   //console.log(data);
+
   return (
     <div>
       <div className={styled.stockDetails}>
