@@ -1,0 +1,137 @@
+.dataResult {
+  margin-top: 5px;
+  width: 625px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  margin: auto;
+  max-height: 336px;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.dataItem p {
+  margin-left: 10px;
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: lightgrey;
+}
+
+#clearBtn {
+  cursor: pointer;
+}
+.search-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 35px;
+  border-top: 1px solid #ededed;
+}
+.up-green,
+.down-red {
+  width: 14%;
+  object-fit: contain;
+  margin-right: 3px;
+}
+
+.search-details > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  width: 100px;
+}
+.search-details > div:nth-of-type(2) > p:nth-of-type(2) {
+  display: flex;
+  /* align-items: center; */
+}
+.search-details > div > * {
+  padding: 5px;
+}
+.search-details:hover {
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.search-details > div:nth-of-type(1) > div {
+  display: inline-flex;
+  font-size: 9px;
+  background: #ededed;
+  border-radius: 8px;
+}
+.search-details:hover.search-details > div:nth-of-type(1) > div {
+  background: #fff;
+}
+.stockDetails {
+  width: 75%;
+  margin: auto;
+  border: 1px solid #ededed;
+}
+.nameDetail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+.nameDetail > div:nth-of-type(1) {
+  font-size: 20px;
+}
+.nameDetail > div:nth-of-type(2) > * {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.show {
+  position: absolute;
+  display: flex;
+  left: 60%;
+}
+.hidden {
+  display: none;
+}
+.show > div {
+  margin: 0 5px;
+  border-radius: 5px;
+}
+.show > div:hover {
+  transform: scale(1.1);
+  transition: 0.3s all;
+}
+.show > div:nth-of-type(1),
+.show > div:nth-of-type(4),
+.show > div:nth-of-type(5) {
+  background: #fff;
+}
+.show > div:nth-of-type(4) {
+  color: red;
+}
+.show > div:nth-of-type(2) {
+  background: #1990ff;
+  padding: 5px 15px;
+  color: #fff;
+}
+.show > div:nth-of-type(3) {
+  background: #ff4d4f;
+  padding: 5px 15px;
+  color: #fff;
+}
