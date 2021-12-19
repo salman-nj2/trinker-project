@@ -1,4 +1,5 @@
-Getting Started with Create React App
+check out the deployed link here: https://trinkerr-stocks-app.herokuapp.com/
+
 This project was bootstrapped with Create React App.
 
 Available Scripts
