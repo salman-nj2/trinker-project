@@ -45,7 +45,7 @@ function SearchBar({ placeholder, data }) {
       value: e[1],
       percent: percentage(e),
     };
-    let response = await axios.post("http://localhost:5000/stocks", payload);
+    let response = await axios.post("/stocks", payload);
     setwatchData(response);
   };
 
@@ -54,7 +54,7 @@ function SearchBar({ placeholder, data }) {
   }, [checked]);
 
   const checkData = async () => {
-    let response = await axios.get("http://localhost:5000/stocks");
+    let response = await axios.get("/stocks");
     setChecked(response.data);
   };
   const handleChecked = (val) => {

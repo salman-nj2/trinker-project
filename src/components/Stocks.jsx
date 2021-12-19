@@ -12,7 +12,7 @@ function Stocks() {
   const [hover, setHover] = useState(-1);
 
   const getData = async () => {
-    let response = await axios.get("http://localhost:5000/stocks");
+    let response = await axios.get("/stocks");
     setData(response.data);
   };
   useEffect(() => {
@@ -20,7 +20,7 @@ function Stocks() {
   }, [data]);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/stocks/${id}`);
+    await axios.delete(`/stocks/${id}`);
     const delData = data.filter((item) => item.id !== id);
     setData(delData);
   };
