@@ -30,7 +30,7 @@ function Stocks() {
     <div>
       <div className={styled.stockDetails}>
         <div className={styled.nameDetail}>
-          <div contenteditable="true">{nameData}</div>
+          <div contentEditable="true">{nameData}</div>
           <div>
             <EditIcon />
             <DeleteOutlineOutlinedIcon />
